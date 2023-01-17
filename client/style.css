@@ -13,13 +13,13 @@ body {
 
 #app {
   width: 100vw;
-  height: 100vh;
-  background: #343541;
-
+  min-height: 100vh;
+  background: gainsboro;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 #chat_container {
@@ -47,6 +47,8 @@ body {
 .wrapper {
   width: 100%;
   padding: 15px;
+  border-radius: 20px;
+  z-index: 2;
 }
 
 .ai {
@@ -62,6 +64,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
+  z-index: 2;
 }
 
 .profile {
@@ -70,7 +73,7 @@ body {
   border-radius: 5px;
 
   background: #5436da;
-
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +91,8 @@ body {
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  z-index: 2;
+  color: black;
   font-size: 20px;
 
   max-width: 100%;
@@ -113,23 +116,27 @@ body {
 }
 
 form {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+  width: -webkit-fill-available;
+  max-width: 100vw;
+  border: 1px solid black;
+  margin: 0.5rem;
   padding: 10px;
-  background: #40414f;
-
+  background: white;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  bottom: 0;
+  position: fixed;
+  z-index: 5;
 }
 
 textarea {
   width: 100%;
-
-  color: #fff;
+  font-style: italic;
+  color: black;
   font-size: 18px;
-
+  resize: none;
   padding: 10px;
   background: transparent;
   border-radius: 5px;
@@ -147,4 +154,25 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+#chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  justify-content: start;
+  align-items: flex-start;
+  width: -webkit-fill-available;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.bg {
+  text-align: center;
+  z-index: 0;
+  font-size: 4em;
+  font-style: italic;
+  color: gainsboro;
+  text-shadow: #fff 0 0 1px, #eee 0 4px 3px, #ddd 0 9px 3px, #ccc 0 12px 1px,
+    rgba(0, 0, 0, 0.2) 1px 14px 3px, rgba(0, 0, 0, 0.2) 2px 20px 10px,
+    rgba(0, 0, 100, 0.3) 2px 15px 90px;
 }

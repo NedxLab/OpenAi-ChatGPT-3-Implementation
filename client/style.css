@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -165,6 +166,7 @@ form img {
   width: -webkit-fill-available;
   border-radius: 5px;
   padding: 1rem;
+  margin: 1rem 2rem 4rem 1rem;
 }
 .bg {
   text-align: center;
